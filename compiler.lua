@@ -1,9 +1,8 @@
 local HTTPASSETS = {
-    ["Main"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/initialLua.lua?token=GHSAT0AAAAAABWVDN6KYNFA35O2FW7QGEHMYWSTEXQ",
-    ["newPart"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/newPart.lua?token=GHSAT0AAAAAABWVDN6KLPOEZKKR2UEZY2VQYWSTFUA",
-    ["Tween"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/Tween.lua?token=GHSAT0AAAAAABWVDN6LZZPC22MEBFXYBUXQYWSUBBA"
+    ["Main"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/initialLua.lua",
+    ["newPart"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/newPart.lua",
+    ["Tween"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/Tween.lua"
 }
-game.HttpService.HttpEnabled = true
 local Packages = Instance.new("Folder", game.ReplicatedStorage)
 Packages.Name = "Packages"
 local Repo = Instance.new("Folder", Packages)
@@ -19,5 +18,3 @@ for i,v in pairs(HTTPASSETS) do
         ModuleScript.Parent = Repo
     end
 end
-
-game.HttpService.HttpEnabled = false
