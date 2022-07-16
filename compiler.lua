@@ -1,6 +1,6 @@
 local HTTPASSETS = {
-    ["Main"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/initialLua.lua?token=GHSAT0AAAAAABWVDN6LRWJHLVXFY4OZSMHCYWSS3GA",
-    ["newPart"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/newPart.lua?token=GHSAT0AAAAAABWVDN6LBQFZVUVPN7CKER6MYWSS3UQ"
+    ["Main"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/initialLua.lua?token=GHSAT0AAAAAABWVDN6KYNFA35O2FW7QGEHMYWSTEXQ",
+    ["newPart"] = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/newPart.lua?token=GHSAT0AAAAAABWVDN6KLPOEZKKR2UEZY2VQYWSTFUA"
 }
 
 for i,v in pairs(HTTPASSETS) do
