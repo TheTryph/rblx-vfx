@@ -1,2 +1,2 @@
 # rblx-vfx
- module for vfx
+A simple module for roblox VFX
