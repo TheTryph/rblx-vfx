@@ -3,6 +3,8 @@ local modulesFolder = game.ReplicatedStorage.Packages.Repo
 local newPart = require(modulesFolder.newPart)
 local Tween = require(modulesFolder.Tween)
 
+module.Color = Color3.new(0,0,1)
+
 function module:circleExplosion(pos)
     local Circle = newPart {
         Shape = Enum.PartType.Cylinder,
@@ -11,7 +13,7 @@ function module:circleExplosion(pos)
 		Anchored = true,
 		Orientation = Vector3.new(0,0,-90),
 		Material = Enum.Material.Neon,
-		Color = Color3.new(0,0,1),
+		Color = module.Color,
 		Position = pos
 	}
 	Tween.tween(3, {
@@ -29,7 +31,7 @@ function module:tallExplosion(pos)
 		Anchored = true,
 		Orientation = Vector3.new(0,0,-90),
 		Material = Enum.Material.Neon,
-		Color = Color3.new(0,0,1),
+		Color = module.Color,
 		Position = pos
 	}
 	Tween.tween(3, {
@@ -47,7 +49,7 @@ function module:sphereExplosion(pos)
 		Anchored = true,
 		Orientation = Vector3.new(0,0,-90),
 		Material = Enum.Material.Neon,
-		Color = Color3.new(0,0,1),
+		Color = module.Color,
 		Position = pos
 	}
 	Tween.tween(3, {
