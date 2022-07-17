@@ -7,6 +7,10 @@ Execute the following command into the studio's command bar.
 
 ```local f = loadstring(game.HttpService:GetAsync("https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/compiler.lua")) f()```
 
+*For the non HTTPSenabled experiences:*:
+
+```game.HttpService.HttpEnabled = true local f = loadstring(game.HttpService:GetAsync("https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/compiler.lua")) f() game.HttpService.HttpEnabled = false```
+
 (Note: A Packages folder will be created in ReplicatedStorage, you can rename it whatever you want to, as long as the descendants of the folder aren't touched.)
 
 # Documentation:
