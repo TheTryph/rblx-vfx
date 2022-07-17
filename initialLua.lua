@@ -1,5 +1,5 @@
 local module = {}
-local modulesFolder = game.ReplicatedStorage.Packages.Repo
+local modulesFolder = script.Parent.Repo
 local newPart = require(modulesFolder.newPart)
 local Tween = require(modulesFolder.Tween)
 
