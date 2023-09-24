@@ -43,6 +43,8 @@ Sets the color that the parts use, by default it is blue
 Used by `module:stockExplosions(explosionName, pos)`
 
 `Bust`
+`Pillar`
+`LargeThump`
 
 # API:
 
