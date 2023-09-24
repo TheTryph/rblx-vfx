@@ -76,6 +76,13 @@ local explosionPacks = {
 	["Bust"] = function(pos)
 		module:sphereExplosion(pos)
 		module:circleExplosion(pos)
+	end,
+	["Pillar"] = function (pos)
+		module:tallExplosion(pos)
+		module:circleExplosion(pos)
+	end,
+	["LargeThump"] = function(pos)
+		module:circleExplosion(pos)
 	end
 }
 
