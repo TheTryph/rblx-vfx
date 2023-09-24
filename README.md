@@ -31,10 +31,16 @@ Ideal for making cubical explosions. (Proposed by TheTryph at 24th september 202
 `module.Color = Color3`
 Sets the color that the parts use, by default it is blue
 
+## Stock Explosions:
+Used by `module:stockExplosions(explosionName, pos)`
+
+`Bust`
+
 # API:
 
 `void module:circleExplosion(pos)`
 `void module:tallExplosion(pos)`
 `void module:sphericalExplosion(pos)`
 `void module:blockExplosion(pos)`
+`void module:stockExplosion(explosionName, pos)`
 `Color3 module.Color`
