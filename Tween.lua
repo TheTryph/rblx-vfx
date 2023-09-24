@@ -26,6 +26,7 @@ local tweenService = game:GetService("TweenService")
 function tween.tween(dur, prop, inst)
 	local tweenInfo = TweenInfo.new(dur, Enum.EasingStyle.Sine,Enum.EasingDirection.Out, 0)
 	tweenService:Create(inst, tweenInfo, prop):Play()
+	print("Tween is now tweening.")
 end
 
 return tween
