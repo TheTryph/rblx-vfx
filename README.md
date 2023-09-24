@@ -25,5 +25,16 @@ Ideal for making tall circle explosions
 `module:sphericalExplosion(pos)`
 Ideal for making spherical explosions
 
-`module.Color = color3`
+`module:blockExplosion(pos)`
+Ideal for making cubical explosions. (Proposed by TheTryph at 24th september 2023.)
+
+`module.Color = Color3`
 Sets the color that the parts use, by default it is blue
+
+# API:
+
+`void module:circleExplosion(pos)`
+`void module:tallExplosion(pos)`
+`void module:sphericalExplosion(pos)`
+`void module:blockExplosion(pos)`
+`Color3 module.Color`
