@@ -72,4 +72,15 @@ function module:blockExplosion(pos)
 	game.Debris:AddItem(Sphere, 3)
 end
 
+local explosionPacks = {
+	["Bust"] = function(pos)
+		module:sphereExplosion(pos)
+		module:circleExplosion(pos)
+	end
+}
+
+function module:stockExplosion(explosionName, position)
+	explosionPacks[explosionName](position)
+end
+
 return module
