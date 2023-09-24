@@ -59,7 +59,7 @@ function module:sphereExplosion(pos)
 	game.Debris:AddItem(Sphere, 3)
 end
 
-function module:blockExplosion()
+function module:blockExplosion(pos)
 	local Block = newPart {
 		Name="VFX",
 		Size=Vector3.new(10,10,10),
