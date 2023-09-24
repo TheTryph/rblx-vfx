@@ -72,4 +72,27 @@ function module:blockExplosion(pos)
 	game.Debris:AddItem(Sphere, 3)
 end
 
+local explosionPacks = {
+	["Bust"] = function(pos)
+		module:sphereExplosion(pos)
+		module:circleExplosion(pos)
+	end
+}
+
+function module:stockExplosion(explosionName, position)
+	do
+		local explosionFunction = explosionPacks[explosionName]
+
+		if explosionFunction ~= nil then
+			
+			explosionFunction(position)
+
+		else
+
+			warn("Explosion type not found, are you sure you typed it well?")
+			
+		end
+	end
+end
+
 return module

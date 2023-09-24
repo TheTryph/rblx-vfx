@@ -31,6 +31,7 @@ Ideal for making spherical explosions
 Ideal for making cubical explosions. (Proposed by TheTryph at 24th september 2023.)
 
 `module:stockExplosion(explosionName : stockExplosionName, pos : Vector3)`
+Ideal for making stock explosions mentioned below.
 
 ## Properties
 Module's properties
@@ -38,6 +39,10 @@ Module's properties
 `module.Color = Color3`
 Sets the color that the parts use, by default it is blue
 
+## Stock Explosions:
+Used by `module:stockExplosions(explosionName, pos)`
+
+`Bust`
 
 # API:
 
@@ -45,4 +50,5 @@ Sets the color that the parts use, by default it is blue
 `void module:tallExplosion(pos : Vector3)`
 `void module:sphericalExplosion(pos : Vector3)`
 `void module:blockExplosion(pos : Vector3)`
+`void module:stockExplosion(explosionName, pos)`
 `Color3 module.Color`
