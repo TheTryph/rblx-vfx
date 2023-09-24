@@ -81,4 +81,9 @@ function module:funct2()
   
 end
 
+function module:DestroyBlocks()
+
+end
+
+
 return module
