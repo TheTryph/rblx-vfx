@@ -81,6 +81,10 @@ function module:funct2()
   
 end
 
+function module:DestroyBlocks()
+
+end
+
 function Rackblocks()
 
 end
