@@ -80,7 +80,19 @@ local explosionPacks = {
 }
 
 function module:stockExplosion(explosionName, position)
-	explosionPacks[explosionName](position)
+	do
+		local explosionFunction = explosionPacks[explosionName]
+
+		if explosionFunction ~= nil then
+			
+			explosionFunction(position)
+
+		else
+
+			warn("Explosion type not found, are you sure you typed it well?")
+			
+		end
+	end
 end
 
 return module
