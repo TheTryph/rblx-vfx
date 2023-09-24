@@ -15,26 +15,34 @@ Execute the following command into the studio's command bar.
 
 # Documentation:
 
-`module:circleExplosion(pos)`
+## Functions:
+Module's functions:
+
+`module:circleExplosion(pos : Vector3)`
 Ideal for making circle explosions
 
-
-`module:tallExplosion(pos)`
+`module:tallExplosion(pos : Vector3)`
 Ideal for making tall circle explosions
 
-`module:sphericalExplosion(pos)`
+`module:sphericalExplosion(pos : Vector3)`
 Ideal for making spherical explosions
 
-`module:blockExplosion(pos)`
+`module:blockExplosion(pos : Vector3)`
 Ideal for making cubical explosions. (Proposed by TheTryph at 24th september 2023.)
+
+`module:stockExplosion(explosionName : stockExplosionName, pos : Vector3)`
+
+## Properties
+Module's properties
 
 `module.Color = Color3`
 Sets the color that the parts use, by default it is blue
 
+
 # API:
 
-`void module:circleExplosion(pos)`
-`void module:tallExplosion(pos)`
-`void module:sphericalExplosion(pos)`
-`void module:blockExplosion(pos)`
+`void module:circleExplosion(pos : Vector3)`
+`void module:tallExplosion(pos : Vector3)`
+`void module:sphericalExplosion(pos : Vector3)`
+`void module:blockExplosion(pos : Vector3)`
 `Color3 module.Color`
