@@ -72,4 +72,9 @@ function module:blockExplosion()
 	game.Debris:AddItem(Sphere, 3)
 end
 
+function module:func1()
+
+end
+
+
 return module
