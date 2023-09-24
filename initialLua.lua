@@ -59,4 +59,17 @@ function module:sphereExplosion(pos)
 	game.Debris:AddItem(Sphere, 3)
 end
 
+function module:blockExplosion()
+	local Block = newPart {
+		Name="VFX",
+		Size=Vector3.new(10,10,10),
+		Anchored = true,
+		Material = Enum.Material.Neon,
+		Color = module.Color,
+		Position = pos
+	}
+	Tween.tween(3, {Transparency = 1, Size = Vector3.new(50,50,50)}, Block)
+	game.Debris:AddItem(Sphere, 3)
+end
+
 return module
