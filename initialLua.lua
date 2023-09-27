@@ -69,7 +69,7 @@ function module:blockExplosion(pos, size)
 		Position = pos
 	}
 	Tween.tween(3, {Transparency = 1, Size = Vector3.new(size,size,size)}, Block)
-	game.Debris:AddItem(Sphere, 3)
+	game.Debris:AddItem(Block, 3)
 end
 
 local explosionPacks = {
