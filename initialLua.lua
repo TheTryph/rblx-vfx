@@ -5,7 +5,7 @@ local Tween = require(modulesFolder.Tween)
 
 module.Color = Color3.new(0,0,1)
 
-function module:circleExplosion(pos)
+function module:circleExplosion(pos, size)
     local Circle = newPart {
         Shape = Enum.PartType.Cylinder,
         Name = "VFX",
@@ -23,7 +23,7 @@ function module:circleExplosion(pos)
 	game.Debris:AddItem(Circle, 3)
 end
 
-function module:tallExplosion(pos)
+function module:tallExplosion(pos, size)
 	local Circle = newPart {
 		Shape = Enum.PartType.Cylinder,
 		Name = "VFX",
@@ -41,7 +41,7 @@ function module:tallExplosion(pos)
 	game.Debris:AddItem(Circle, 3)
 end
 
-function module:sphereExplosion(pos)
+function module:sphereExplosion(pos, size)
 	local Sphere = newPart {
 		Shape = Enum.PartType.Ball,
 		Name = "VFX",
@@ -59,7 +59,7 @@ function module:sphereExplosion(pos)
 	game.Debris:AddItem(Sphere, 3)
 end
 
-function module:blockExplosion(pos)
+function module:blockExplosion(pos, size)
 	local Block = newPart {
 		Name="VFX",
 		Size=Vector3.new(10,10,10),
@@ -73,26 +73,26 @@ function module:blockExplosion(pos)
 end
 
 local explosionPacks = {
-	["Bust"] = function(pos)
+	["Bust"] = function(pos, size)
 		module:sphereExplosion(pos)
 		module:circleExplosion(pos)
 	end,
-	["Pillar"] = function (pos)
+	["Pillar"] = function (pos, size)
 		module:tallExplosion(pos)
 		module:circleExplosion(pos)
 	end,
-	["LargeThump"] = function(pos)
+	["LargeThump"] = function(pos, size)
 		module:circleExplosion(pos)
 	end
 }
 
-function module:stockExplosion(explosionName, position)
+function module:stockExplosion(explosionName, position, size)
 	do
 		local explosionFunction = explosionPacks[explosionName]
 
 		if explosionFunction ~= nil then
 			
-			explosionFunction(position)
+			explosionFunction(position, size)
 
 		else
 
