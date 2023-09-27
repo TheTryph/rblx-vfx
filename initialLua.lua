@@ -18,7 +18,7 @@ function module:circleExplosion(pos, size)
 	}
 	Tween.tween(3, {
 		Transparency = 1,
-		Size = Vector3.new(1,50,50),
+		Size = Vector3.new(1,size,size),
 	}, Circle)
 	game.Debris:AddItem(Circle, 3)
 end
@@ -36,7 +36,7 @@ function module:tallExplosion(pos, size)
 	}
 	Tween.tween(3, {
 		Transparency = 1,
-		Size = Vector3.new(1000,50,50),
+		Size = Vector3.new(1000,size,size),
 	}, Circle)
 	game.Debris:AddItem(Circle, 3)
 end
@@ -54,7 +54,7 @@ function module:sphereExplosion(pos, size)
 	}
 	Tween.tween(3, {
 		Transparency = 1,
-		Size = Vector3.new(50,50,50),
+		Size = Vector3.new(size,size,size),
 	}, Sphere)
 	game.Debris:AddItem(Sphere, 3)
 end
@@ -68,21 +68,21 @@ function module:blockExplosion(pos, size)
 		Color = module.Color,
 		Position = pos
 	}
-	Tween.tween(3, {Transparency = 1, Size = Vector3.new(50,50,50)}, Block)
+	Tween.tween(3, {Transparency = 1, Size = Vector3.new(size,size,size)}, Block)
 	game.Debris:AddItem(Sphere, 3)
 end
 
 local explosionPacks = {
 	["Bust"] = function(pos, size)
-		module:sphereExplosion(pos)
-		module:circleExplosion(pos)
+		module:sphereExplosion(pos, 50)
+		module:circleExplosion(pos, 70)
 	end,
 	["Pillar"] = function (pos, size)
-		module:tallExplosion(pos)
-		module:circleExplosion(pos)
+		module:tallExplosion(pos, 50)
+		module:circleExplosion(pos, 70)
 	end,
 	["LargeThump"] = function(pos, size)
-		module:circleExplosion(pos)
+		module:circleExplosion(pos, 80)
 	end
 }
 
