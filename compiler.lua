@@ -2,8 +2,8 @@ local URL = "https://raw.githubusercontent.com/TheTryph/rblx-vfx/main/"
 
 local ASSETSTODOWNLOAD = {
     ["Main"] = "initialLua.lua",
-    ["newPart"] = "libs/newPart.lua",
-    ["Tween"] = "libs/Tween.lua"
+    ["newPart"] = "libs/creation/newPart.lua",
+    ["Tween"] = "libs/manipulation/Tween.lua"
 }
 local Packages = Instance.new("Folder")
 Packages.Parent = game.ReplicatedStorage
