@@ -1,5 +1,5 @@
 local module = {}
-local modulesFolder = script.Parent.Repo
+local modulesFolder = script.Parent
 local newPart = require(modulesFolder.libs.creation.newPart)
 local Tween = require(modulesFolder.libs.manipulation.Tween)
 
