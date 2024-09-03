@@ -28,7 +28,7 @@ Ideal for making tall circle explosions
 Ideal for making spherical explosions
 
 `module:blockExplosion(pos : Vector3, size : Number)`
-Ideal for making cubical explosions. (Proposed by TheTryph at 24th september 2023.)
+Ideal for making cubical explosions.
 
 `module:stockExplosion(explosionName : stockExplosionName, pos : Vector3, size : Number)`
 Ideal for making stock explosions mentioned below.
@@ -57,4 +57,4 @@ Used by `module:stockExplosions(explosionName, pos, size)`
 
 # License
 
-Roblox VFX is available under the terms of the MIT License. See [LICENSE](LICENSE.MD) for details.
+Roblox VFX is available under the terms of the MIT License. See [LICENSE](LICENSE.md) for details.
