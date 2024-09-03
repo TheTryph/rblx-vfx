@@ -54,3 +54,7 @@ Used by `module:stockExplosions(explosionName, pos, size)`
 `void module:blockExplosion(pos : Vector3, size : Number)`
 `void module:stockExplosion(explosionName, pos, size)`
 `Color3 module.Color`
+
+# License
+
+Roblox VFX is available under the terms of the MIT License. See [LICENSE](LICENSE.MD) for details.
