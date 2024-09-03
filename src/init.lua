@@ -1,7 +1,7 @@
 local module = {}
-local modulesFolder = script.Parent
-local newPart = require(modulesFolder.libs.creation.newPart)
-local Tween = require(modulesFolder.libs.manipulation.Tween)
+local modulesFolder = script
+local newPart = require(modulesFolder.newPart)
+local Tween = require(modulesFolder.Tween)
 
 module.Color = Color3.new(0,0,1)
 
