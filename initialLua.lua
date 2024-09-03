@@ -5,7 +5,7 @@ local Tween = require(modulesFolder.libs.manipulation.Tween)
 
 module.Color = Color3.new(0,0,1)
 
-function module:circleExplosion(pos)
+function module:circleExplosion(pos, size)
     local Circle = newPart {
         Shape = Enum.PartType.Cylinder,
         Name = "VFX",
@@ -18,12 +18,12 @@ function module:circleExplosion(pos)
 	}
 	Tween.tween(3, {
 		Transparency = 1,
-		Size = Vector3.new(1,50,50),
+		Size = Vector3.new(1,size,size),
 	}, Circle)
 	game.Debris:AddItem(Circle, 3)
 end
 
-function module:tallExplosion(pos)
+function module:tallExplosion(pos, size)
 	local Circle = newPart {
 		Shape = Enum.PartType.Cylinder,
 		Name = "VFX",
@@ -36,12 +36,12 @@ function module:tallExplosion(pos)
 	}
 	Tween.tween(3, {
 		Transparency = 1,
-		Size = Vector3.new(1000,50,50),
+		Size = Vector3.new(1000,size,size),
 	}, Circle)
 	game.Debris:AddItem(Circle, 3)
 end
 
-function module:sphereExplosion(pos)
+function module:sphereExplosion(pos, size)
 	local Sphere = newPart {
 		Shape = Enum.PartType.Ball,
 		Name = "VFX",
@@ -54,12 +54,12 @@ function module:sphereExplosion(pos)
 	}
 	Tween.tween(3, {
 		Transparency = 1,
-		Size = Vector3.new(50,50,50),
+		Size = Vector3.new(size,size,size),
 	}, Sphere)
 	game.Debris:AddItem(Sphere, 3)
 end
 
-function module:blockExplosion(pos)
+function module:blockExplosion(pos, size)
 	local Block = newPart {
 		Name="VFX",
 		Size=Vector3.new(10,10,10),
@@ -68,31 +68,31 @@ function module:blockExplosion(pos)
 		Color = module.Color,
 		Position = pos
 	}
-	Tween.tween(3, {Transparency = 1, Size = Vector3.new(50,50,50)}, Block)
+	Tween.tween(3, {Transparency = 1, Size = Vector3.new(size,size,size)}, Block)
 	game.Debris:AddItem(Block, 3)
 end
 
 local explosionPacks = {
-	["Bust"] = function(pos)
-		module:sphereExplosion(pos)
-		module:circleExplosion(pos)
+	["Bust"] = function(pos, size)
+		module:sphereExplosion(pos, 50)
+		module:circleExplosion(pos, 70)
 	end,
-	["Pillar"] = function (pos)
-		module:tallExplosion(pos)
-		module:circleExplosion(pos)
+	["Pillar"] = function (pos, size)
+		module:tallExplosion(pos, 50)
+		module:circleExplosion(pos, 70)
 	end,
-	["LargeThump"] = function(pos)
-		module:circleExplosion(pos)
+	["LargeThump"] = function(pos, size)
+		module:circleExplosion(pos, 80)
 	end
 }
 
-function module:stockExplosion(explosionName, position)
+function module:stockExplosion(explosionName, position, size)
 	do
 		local explosionFunction = explosionPacks[explosionName]
 
 		if explosionFunction ~= nil then
 			
-			explosionFunction(position)
+			explosionFunction(position, size)
 
 		else
 

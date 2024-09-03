@@ -18,19 +18,19 @@ Execute the following command into the studio's command bar.
 ## Functions:
 Module's functions:
 
-`module:circleExplosion(pos : Vector3)`
+`module:circleExplosion(pos : Vector3, size : Number)`
 Ideal for making circle explosions
 
-`module:tallExplosion(pos : Vector3)`
+`module:tallExplosion(pos : Vector3, size : Number)`
 Ideal for making tall circle explosions
 
-`module:sphericalExplosion(pos : Vector3)`
+`module:sphericalExplosion(pos : Vector3, size : Number)`
 Ideal for making spherical explosions
 
-`module:blockExplosion(pos : Vector3)`
+`module:blockExplosion(pos : Vector3, size : Number)`
 Ideal for making cubical explosions. (Proposed by TheTryph at 24th september 2023.)
 
-`module:stockExplosion(explosionName : stockExplosionName, pos : Vector3)`
+`module:stockExplosion(explosionName : stockExplosionName, pos : Vector3, size : Number)`
 Ideal for making stock explosions mentioned below.
 
 ## Properties
@@ -40,7 +40,7 @@ Module's properties
 Sets the color that the parts use, by default it is blue
 
 ## Stock Explosions:
-Used by `module:stockExplosions(explosionName, pos)`
+Used by `module:stockExplosions(explosionName, pos, size)`
 
 `Bust`
 `Pillar`
@@ -48,9 +48,9 @@ Used by `module:stockExplosions(explosionName, pos)`
 
 # API:
 
-`void module:circleExplosion(pos : Vector3)`
-`void module:tallExplosion(pos : Vector3)`
-`void module:sphericalExplosion(pos : Vector3)`
-`void module:blockExplosion(pos : Vector3)`
-`void module:stockExplosion(explosionName, pos)`
+`void module:circleExplosion(pos : Vector3, size : Number)`
+`void module:tallExplosion(pos : Vector3, size : Number)`
+`void module:sphericalExplosion(pos : Vector3, size : Number)`
+`void module:blockExplosion(pos : Vector3, size : Number)`
+`void module:stockExplosion(explosionName, pos, size)`
 `Color3 module.Color`
